@@ -1,0 +1,24 @@
+@use '../dashboard.component.scss' as c;
+.mat-accordion .mat-expansion-panel-header{
+    font-family: 'Noto Kufi Arabic', sans-serif;
+
+}
+th.mat-header-cell,  td.mat-footer-cell{
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-weight: bold;
+    font-size: large;
+
+}
+td.mat-cell{
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+.btn-background{
+    background-color: c.$btnlogin-background;
+
+}
+.bg-row{
+    background-color: #ff4081;
+}
+input[type="file"] {
+    display: none;
+}

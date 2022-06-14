@@ -1,0 +1,42 @@
+
+  <div class="container-fluid login-background text-center">
+    <div class="row ">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 mt-5 pt-5">
+      <mat-card>
+        <mat-card-title>
+          <a [routerLink]="['/home']" routerLinkActive="active" >
+          <img src="../../assets/logo.png" alt="Connect Platform Logo" >
+        </a>
+        </mat-card-title>
+        <mat-card-content>
+            <mat-form-field appearance="fill" class="fullwidth">
+                <mat-label>اسم الدخول </mat-label>
+                <input matInput >
+                <button mat-icon-button matSuffix>
+                  <mat-icon>perm_identity</mat-icon>
+                </button>
+              </mat-form-field>
+            <mat-form-field appearance="fill" class="fullwidth">
+                <mat-label>كلمة المرور  </mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+              <a routerLink="/resetpassword" mat-button color="primary">هل نسيت كلمة المرور ؟</a>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="goDashboard()">دخول</button>
+        </mat-card-actions>
+        <mat-card-footer>
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+
+  </div>
+      
+

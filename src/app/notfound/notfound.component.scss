@@ -1,0 +1,54 @@
+
+#login{
+    background: url(../../assets/pexels-olenka-sergienko-1772123.jpg) fixed no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height:100vh;
+    
+    }
+    .login-center{
+    
+        font-family: 'Noto Kufi Arabic', sans-serif;
+        position: absolute;
+        top: 25%;
+        right: 35%;
+        width: 30%;
+        height: 30%;
+        text-align: center;
+        z-index:20;
+        & .login-card{
+            border-radius: 5px;
+        }
+       
+    }
+    .fullwidth{
+        width: 100%;
+    }
+    .toolbar{
+        background-color: transparent;
+        // box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        width: 100%;
+       
+     
+        & .toolbar-right{
+            float: right;
+            width: 50%;
+        }
+        & .toolbar-left{
+            float: left;
+            width: 50%;
+            text-align: left;
+        }
+    }
+    @media only screen and  (max-width:768px) {
+        .login-center{
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            position: absolute;
+            top: 25%;
+            right: 25%;
+            width: 50vh;
+            height: 30%;
+            text-align: center;
+        
+        }
+    }

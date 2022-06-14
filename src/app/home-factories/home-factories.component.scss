@@ -1,0 +1,30 @@
+@use '../home-navbar/home-navbar.component' as c;
+
+.boxmargin{
+  
+    margin-top: 50px;
+    padding:5%;
+   
+}
+.introbox{
+    background-color: c.$toolbar-background;
+    color: c.$toolbar-color;
+    box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.16);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0px 1%;
+    
+    .btnlogin{
+        background-color: c.$btnlogin-background;
+    }
+    img{
+        width: 50px;
+        height: 50px;
+        
+  
+
+    }
+    h5{
+        margin-top: 5px;
+    }
+}

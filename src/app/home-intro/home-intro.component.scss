@@ -1,0 +1,19 @@
+$toolbar-background:#fff;
+$toolbar-color:#030053;
+$toolbar-color-hover:#000;
+$btnlogin-background:#E8E8E8;
+.introbox{
+    background-color: $toolbar-background;
+    color: $toolbar-color;
+    box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.16);
+    border-radius: 10px;
+    padding: 1rem;
+    .btnlogin{
+        background-color: $btnlogin-background;
+    }
+  
+    h5{
+        margin-top: 5px;
+    }
+}
+

@@ -1,1 +1,27 @@
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300&display=swap');
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Noto Kufi Arabic', sans-serif;}
+@media  (max-width: 576px)  {
+    .carousel-control-prev {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 2000;
+        margin-left: 0px;
+      }
+      .carousel-control-next {
+        position: absolute;
+        top: 0;
+        bottom: 0 ;
+        z-index: 2000;
+        margin-right: 0px;
+ 
+      }
+}
+
+
+
+

@@ -1,0 +1,126 @@
+  <mat-accordion class="m-5" multi="true">
+    <mat-expansion-panel class="w-75 m-auto mb-3" #matAddService>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+           خدمة جديدة
+          </mat-panel-title>
+         
+          
+        </mat-expansion-panel-header>
+        <form [formGroup]="options"  (ngSubmit)="addService()">
+          <input type="hidden" formControlName="servicePosition">
+          <mat-form-field class="w-100 m-2"  appearance="fill">
+            <mat-label>عنوان الخدمة</mat-label>
+             <input  matInput placeholder="عنوان الخدمة" required formControlName="serviceName" #matAddServiceName="matInput">
+    </mat-form-field>
+    <mat-form-field class="w-100 m-2"  appearance="fill">
+      <mat-label>تفاصيل الخدمة</mat-label>
+       <textarea  matInput placeholder="تفاصيل الخدمة" required formControlName="serviceDetails"></textarea>
+</mat-form-field>
+<mat-form-field appearance="fill" class="w-100 m-2">
+  <mat-label>تاريخ الخدمة</mat-label>
+  <input matInput [matDatepicker]="picker" formControlName="serviceDateTime">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<mat-grid-list cols="6" rowHeight="100" >
+  <mat-grid-tile>
+    <button mat-raised-button class="btn-background" [disabled]="!options.valid" type="submit">حفظ</button>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button type="reset" mat-raised-button class="btn-background" (click)="removeService()">الغاء</button>
+  </mat-grid-tile>
+</mat-grid-list>
+  
+  
+
+
+        </form>
+       
+      </mat-expansion-panel>
+    <mat-expansion-panel class="w-75 m-auto" [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          جدول الخدمات
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      
+    
+      <div>
+        <table mat-table [dataSource]="dataSource" class="w-100">
+        <!-- Checkbox Column -->
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-checkbox (change)="$event ? masterToggle() : null"
+                    [checked]="selection.hasValue() && isAllSelected()"
+                    [indeterminate]="selection.hasValue() && !isAllSelected()"
+                    [aria-label]="checkboxLabel()">
+      </mat-checkbox>
+    </th>
+    <td mat-cell  *matCellDef="let row">
+      <mat-checkbox   (click)="$event.stopPropagation()"
+                    (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)"
+                    [aria-label]="checkboxLabel(row)">
+      </mat-checkbox>
+    </td>
+  </ng-container>
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> الكود </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+      
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> عنوان الخدمة </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+      
+          <!-- Weight Column -->
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> التفاصيل </th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+          </ng-container>
+      
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> التاريخ </th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol|date}} </td>
+          </ng-container>
+
+          <!-- Actions Column-->
+
+          <ng-container matColumnDef="actions"> 
+
+            <th mat-header-cell *matHeaderCellDef> الإختيارات </th>
+            <td mat-cell *matCellDef="let element">
+            <button mat-mini-fab class="m-1" (click)="removeRow(element)">
+              <mat-icon>delete</mat-icon>
+            </button>  
+            <button mat-mini-fab class="m-1" (click)="editRow(element)">
+              <mat-icon>edit</mat-icon>
+            </button>  
+            <button mat-mini-fab class="m-1" (click)="openAddService()">
+              <mat-icon>add</mat-icon>
+            </button>  
+            </td>
+
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="selection.isSelected(row)?'bg-row':''"></tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                       showFirstLastButtons 
+                       pageSize="20"
+                       aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
+  
+    </mat-expansion-panel>
+
+  </mat-accordion>
+  

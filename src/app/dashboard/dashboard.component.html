@@ -1,0 +1,119 @@
+
+<mat-drawer-container class="dashboard-container">
+    <mat-drawer #drawer class="dashboard-sidenav" mode="side">
+      <div class="text-center p-3">
+        <img src="../../assets/avatar.png" class="img-fluid" alt="">
+      </div>
+      
+  <mat-list role="list" class="pt-5">
+
+  <mat-divider></mat-divider>
+
+  <mat-list-item role="listitem">
+    
+<a [routerLink]="['/dashboard/home']" routerLinkActive="active" class="fw-bold" >
+  <mat-icon>home</mat-icon>
+  الرئيسية
+</a>
+
+  
+  
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item role="listitem">
+    <a [routerLink]="['/dashboard/services']" routerLinkActive="active" class="fw-bold" >
+      <mat-icon>medical_services</mat-icon>
+      الخدمات
+    </a> 
+    
+    
+    </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item role="listitem">
+    <a [routerLink]="['/dashboard/factories']" routerLinkActive="active" class="fw-bold" >
+      <mat-icon>factory</mat-icon>
+      الصناعات
+    </a> 
+     
+    
+    </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item role="listitem">
+    <a [routerLink]="['/home']" routerLinkActive="active" class="fw-bold" >
+      <mat-icon>newspaper</mat-icon>
+      المدونة
+    </a> 
+     
+    
+    </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item role="listitem">
+    <a [routerLink]="['/home']" routerLinkActive="active" class="fw-bold" >
+      <mat-icon>support_agent</mat-icon>
+      الدعم
+    </a>   
+    
+  
+  </mat-list-item>
+  <mat-divider></mat-divider>
+
+  <mat-list-item role="listitem">
+    <a [routerLink]="['/home']" routerLinkActive="active" class="fw-bold" >
+      <mat-icon>work</mat-icon>
+      الوظائف
+    </a>    
+    
+  
+  </mat-list-item>
+  <mat-divider></mat-divider>
+
+  <mat-list-item role="listitem">
+    <a [routerLink]="['/home']" routerLinkActive="active" class="fw-bold" >
+      <mat-icon>logout</mat-icon>
+      تسجيل الخروج
+
+    </a>   
+  
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+
+
+  </mat-list>
+      
+    </mat-drawer>
+  
+    <div class="dashboard-sidenav-content">
+        <mat-toolbar class="bg-toolbar">
+          <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-md-4 offset-0 offset-md-6">
+              <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+              </button>
+              <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active" > <img src="../../assets/logo.png" alt="" srcset=""></a>
+
+            </div>
+            
+            <div class="col-md-2 mt-5 text-center">
+                          
+              <button mat-icon-button class="btnlogin" (click)="goToHome()" aria-label="Example icon-button with heart icon">
+                                 
+                <mat-icon>logout</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+          
+         
+          </mat-toolbar>
+          <router-outlet></router-outlet>
+          
+    </div>
+  
+  
+  </mat-drawer-container>
+  
+

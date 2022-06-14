@@ -1,0 +1,141 @@
+<mat-grid-list cols="4" rowHeight="300px">
+    <mat-grid-tile>
+      <mat-card class="p-5 text-center">
+        
+        <mat-card-title>العملاء</mat-card-title>
+        <mat-card-title>2500</mat-card-title>
+        <mat-card-content><mat-icon>people</mat-icon></mat-card-content>
+      </mat-card>
+   
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="p-5 text-center">
+        <mat-card-title>المستخدمين</mat-card-title>
+        <mat-card-title>2500</mat-card-title>
+        <mat-card-content><mat-icon>people</mat-icon></mat-card-content>
+       
+        
+            
+      </mat-card>
+      
+       </mat-grid-tile>
+       <mat-grid-tile>
+       <mat-card class="p-5 text-center">
+        <mat-card-title>الصناعات </mat-card-title>
+        <mat-card-title>2500</mat-card-title>
+        <mat-card-content><mat-icon>design_services</mat-icon></mat-card-content>
+       </mat-card>
+        
+         </mat-grid-tile>
+         <mat-grid-tile>
+          <mat-card class="p-5 text-center">
+            <mat-card-title>الوظائف </mat-card-title>
+            <mat-card-title>2500</mat-card-title>
+            <mat-card-content><mat-icon>work</mat-icon></mat-card-content>
+          </mat-card>
+          
+           </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="3" rowHeight="500px">
+    <mat-grid-tile>
+      <mat-card class="m-2 w-75 h-75 text-center">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>محمد رمزى</mat-card-title>
+          <mat-card-subtitle>مبرمج</mat-card-subtitle>
+        </mat-card-header>
+        <img class="img-fluid w-75 h-50 mb-2" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة          </p>
+        </mat-card-content>
+   
+    
+      </mat-card>
+       
+        </mat-grid-tile>
+      
+          <mat-grid-tile colspan="2">
+            <mat-card class="w-100 h-75 m-5">
+            
+              <mat-card-content class="h-100">
+        <ngx-charts-bar-horizontal
+        [results]="saleData"
+        [xAxisLabel]="'المنتجات'"
+        [legendTitle]="'مبيعات المنتجات'"
+        [yAxisLabel]="'المبيعات'"
+        [legend]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [gradient]="false"
+        [barPadding]="8"
+        [showGridLines]="false"
+        >
+        </ngx-charts-bar-horizontal>
+              </mat-card-content>
+             </mat-card>
+          </mat-grid-tile>
+         
+  </mat-grid-list>
+  <mat-grid-list cols="1" rowHeight="500px">
+      <mat-grid-tile>
+        <mat-card class="w-100 h-75 m-5">
+        
+          <mat-card-content class="h-100">
+    <ngx-charts-bar-vertical 
+    [results]="saleData"
+    [xAxisLabel]="'المنتجات'"
+    [legendTitle]="'مبيعات المنتجات'"
+    [yAxisLabel]="'المبيعات'"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxis]="true"
+    [yAxis]="true"
+    [gradient]="false"
+    [barPadding]="8"
+    [showGridLines]="false"
+    >
+</ngx-charts-bar-vertical>
+          </mat-card-content>
+         </mat-card>
+      </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="2" rowHeight="500px">
+    <mat-grid-tile>
+      <mat-card class="h-100 w-100 m-5">
+           <mat-card-content class="h-100">
+            <ngx-charts-pie-chart
+            [results]="countryData"
+            [legendTitle]="'مبيعات المنتجات'"
+            [legend]="true"
+            [gradient]="false"
+            [labels]="true"
+  
+            >
+  
+            </ngx-charts-pie-chart>
+           </mat-card-content>
+       </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="h-100 w-100 m-5">
+           <mat-card-content class="h-100 w-100">
+            <ngx-charts-pie-grid
+            [results]="countryData"
+            [scheme]="colorScheme"
+            [label]="'الاجمالى'"
+            [animations]="true"
+   
+
+
+            >
+  
+            </ngx-charts-pie-grid>
+           </mat-card-content>
+       </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+

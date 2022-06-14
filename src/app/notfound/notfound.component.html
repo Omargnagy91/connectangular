@@ -1,0 +1,50 @@
+<section id="login">
+    <mat-toolbar class="toolbar">
+     <div class="toolbar-right">
+      <a [routerLink]="['/']" routerLinkActive="router-link-active" >
+  
+        <img src="../../assets/logo.png" alt="Connect Platform Logo" >
+  
+    </a>
+     </div>
+     <div class="toolbar-left">
+     <button mat-icon-button color="primary">
+      <i class="fa fa-2x fa-facebook"></i>
+     </button>
+     <button mat-icon-button color="primary">
+      <i class="fa fa-2x fa-instagram"></i>
+    </button>
+    <button mat-icon-button color="primary">
+      <i class="fa fa-2x fa-whatsapp"></i>
+    </button>
+    <button mat-icon-button color="primary">
+      <i class="fa fa-2x fa-twitter"></i>
+    </button>
+  </div>
+   </mat-toolbar>
+      <div class="login-center">
+          <mat-card class="login-card">
+              <mat-card-title><img src="../../assets/logo.png" alt="Connect Platform Logo" ></mat-card-title>
+              <mat-card-content>
+              
+             
+                <p>
+                    
+                    نأسف يتعذر علينا ايجاد ما تبحث عنه لأنه غير موجود بالفعل 
+                </p>
+                <mat-divider></mat-divider>
+                <mat-label class="mat-display-4 text-primary">404</mat-label>
+              
+              </mat-card-content>
+              <mat-card-actions>
+                <a [routerLink]="['/']" mat-raised-button color="primary">العودة للصفحة الرئيسية</a>
+              </mat-card-actions>
+              <mat-card-footer>
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+              </mat-card-footer>
+            </mat-card>
+      </div>
+  
+  
+  </section>
+  

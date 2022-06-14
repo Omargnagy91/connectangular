@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-toolbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active" > <img src="../../assets/logo.png" alt="" srcset=""></a>
+      <button mat-mini-fab color="warn" (click)="ToggleSearch($event)"> <span class="fa fa-search"></span></button>
+      <form class="toolbar-search" [ngClass]="IsSearchOpen?'open':'close'">
+        <mat-form-field appearance="legacy">
+          <mat-label>بحث فى المنصة</mat-label>
+          <input matInput placeholder="بحث فى المنصة">
+          <mat-icon matSuffix>search</mat-icon>
+          <mat-hint>اكتب الكلمة التى تريد البحث عنها</mat-hint>
+        </mat-form-field>
+      </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a [routerLink]="['/home']" routerLinkActive="active" class="nav-link "  matRipple [matRippleCentered]="true" >الرئيسية</a>
+            
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/home']" routerLinkActive="active"  class="nav-link" matRipple [matRippleCentered]="true" >الخدمات</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/home']" routerLinkActive="active"  class="nav-link" matRipple [matRippleCentered]="true" >الصناعات</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/home']" routerLinkActive="active"  class="nav-link" matRipple [matRippleCentered]="true" >المدونة</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/home']" routerLinkActive="active"  class="nav-link" matRipple [matRippleCentered]="true" >الدعم</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/home']" routerLinkActive="active"  class="nav-link" matRipple [matRippleCentered]="true" >الوظائف</a>
+          </li>
+          <li class="nav-item m-1">
+            <a [routerLink]="['/login']" routerLinkActive="active"  class="nav-link mat-raised-button btnlogin" matRipple [matRippleCentered]="true" > تسجيل دخول&nbsp;<span class="fa fa-user"></span></a>
+            
+          </li>
+          <li class="nav-item m-1">
+            <a [routerLink]="['/login']" routerLinkActive="active"  class="nav-link mat-raised-button btnlogin" matRipple [matRippleCentered]="true" > الاتصال بالمبيعات &nbsp;<span class="fa fa-phone"></span>  </a>
+
+          </li>
+        
+        </ul>
+       
+         
+         
+     
+  
+     
+      </div>
+    </div>
+  </nav>
